@@ -24,25 +24,6 @@
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-    <script src="script6.js"></script>
-    <script>
-        function ChkAddrType(val){
-             var element=document.getElementById('Address Type');
-             if(val=='Other')
-               element.style.display='block';
-             else  
-               element.style.display='none';
-            }
-        function validateZipCode(val){
-            var zipCodePattern = /^\d{5}$|^\d{5}-\d{4}$/;
-            if (zipCodePattern != val){
-                alert("please check zip code format")
-            }
-            else{
-             return zipCodePattern.test(val);
-            }
-        }
-    </script>
   </head>
 
   <body>
@@ -69,7 +50,7 @@
                 <strong>Name</strong><br>
                 <input class="form-control" type="text" name="name"><br>
                 <strong>Address Type</strong><br>
-                <select class="form-control"  name="Address Type" onchange='ChkAddrType(this.value);'><br>
+                <select class="form-control"  name="Address Type"><br>
                     <option value="House">House</option>
                     <option value="Apartment">Apartment</option>
                     <option value="Business">Business</option>
@@ -78,12 +59,8 @@
                     <option value="Dorm">Dorm</option>
                     <option value="Other">Other</option>
                 </select><br>
-                <input class="form-control" type=text name="Address Type" id="Address Type" value="If 'Other', please describe." style='display:none;'/><br>
                 <strong>Address</strong><br>
-                <strong>Line 1: Street, City, State</strong><br>
                 <input class="form-control" type="text" name="address"><br>
-                <strong>Line 2: Zipcode</strong><br>
-                <input class="form-control" type="text" name="zipcode" onchange='validateZipCode(this.value);'><br>
                 <strong>Apt #</strong><br>
                 <input class="form-control" type="text" name="address"><br>
                 <strong>Phone Number</strong><br>
